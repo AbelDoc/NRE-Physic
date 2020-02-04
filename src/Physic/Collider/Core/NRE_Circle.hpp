@@ -3,16 +3,16 @@
      * @file NRE_Circle.hpp
      * @brief Declaration of Physic's API's Object : Circle
      * @author Louis ABEL
-     * @date 03/02/2020
+     * @date 04/02/2020
      * @copyright CC-BY-NC-SA
      */
-
+    
     #pragma once
     
     #include <Header/NRE_Math.hpp>
-
-    #include "../../Utility/Interface/Collideable/NRE_Collideable.hpp"
-
+    
+    #include "../NRE_Collider.hpp"
+    
     /**
      * @namespace NRE
      * @brief The NearlyRealEngine's global namespace
@@ -23,16 +23,16 @@
          * @brief Physic's API
          */
         namespace Physic {
-        
+            
             /**
-             * @class Circle
+             * @class Particle
              * @brief Describe a collideable circle
              */
-            class Circle : public Utility::Collideable<Circle> {
+            class Circle : public Collider<Circle> {
                 private :    // Fields
-                    Math::Point2D<float> center;    /**< The circle's center */
-                    float radius;                   /**< The circle's radius */
-                    
+                    Math::Point2D<float> center;   /**< The circle's center */
+                    float radius;                  /**< The circle's radius */
+                
                 public :   // Methods
                     //## Constructor ##//
                         /**
@@ -40,27 +40,27 @@
                          */
                         Circle() = default;
                         /**
-                         * Construct the circle from it's position and radius
+                         * Construct the circle from it's center and radius
                          * @param c the circle's center
-                         * @param r the circle's float
+                         * @param r the circle's radius
                          */
                         Circle(Math::Point2D<float> const& c, float r) : center(c), radius(r) {
                         }
-    
+                        
                     //## Copy-constructor ##//
                         /**
                          * Copy c into this
                          * @param c the circle to copy
                          */
                         Circle(Circle const& c) = default;
-    
+                    
                     //## Move-constructor ##//
                         /**
                          * Move c into this
-                         * @param c the circle to move
+                         * @param p the circle to move
                          */
                         Circle(Circle && c) = default;
-    
+                    
                     //## Deconstructor ##//
                         /**
                          * Circle Deconstructor
@@ -89,7 +89,7 @@
                          */
                         template <class K>
                         bool collide(K const& o) const;
-    
+                    
                     //## Assignment Operator ##//
                         /**
                          * Copy assignment of c into this

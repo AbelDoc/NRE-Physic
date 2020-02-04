@@ -9,4 +9,4 @@
 
     #pragma once
 
-    #include "NRE_Collideable.hpp"
+    #include "NRE_Collider.hpp"

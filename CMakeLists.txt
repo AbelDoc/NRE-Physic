@@ -15,8 +15,8 @@ include_directories(src/Physic/Interface)
 include_directories(src/Utility/Interface/Collideable)
 
 set(COMPILE_LIST
-        src/Physic/Collideable/NRE_Circle.hpp
-        src/Physic/Collideable/NRE_Particle2D.hpp
+        src/Physic/Collider/Core/NRE_Circle.hpp
+        src/Physic/Collider/Core/NRE_Particle2D.hpp
         src/Physic/NRE_Collideable.hpp
         src/Utility/Interface/Collideable/NRE_Collideable.hpp)
 

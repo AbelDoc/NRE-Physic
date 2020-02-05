@@ -11,14 +11,12 @@ include_directories(C:/Users/abell/Documents/GitHub/NRE-Utility/src)
 
 
 include_directories(src/Physic)
-include_directories(src/Physic/Interface)
-include_directories(src/Utility/Interface/Collideable)
+include_directories(src/Physic/Manager)
 
 set(COMPILE_LIST
-        src/Physic/Collider/Core/NRE_Circle.hpp
-        src/Physic/Collider/Core/NRE_Particle2D.hpp
-        src/Physic/NRE_Collideable.hpp
-        src/Utility/Interface/Collideable/NRE_Collideable.hpp)
+        src/Header/NRE_Physic.hpp
+        src/Physic/Manager/NRE_PhysicManager.hpp
+        src/Physic/Manager/NRE_PhysicManager.tpp)
 
 set(EXEC_LIST
         ${COMPILE_LIST}

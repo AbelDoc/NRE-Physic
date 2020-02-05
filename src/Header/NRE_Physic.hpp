@@ -1,6 +1,6 @@
     
     /**
-     * @file Header/NRE_Collideable.hpp
+     * @file NRE_Physic.hpp
      * @brief Declaration of Physic's API's Main Header
      * @author Louis ABEL
      * @date 03/02/2020
@@ -9,4 +9,4 @@
 
     #pragma once
 
-    #include "NRE_Collider.hpp"
+    #include "NRE_Physic2D.hpp"

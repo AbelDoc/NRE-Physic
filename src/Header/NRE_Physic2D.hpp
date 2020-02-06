@@ -8,3 +8,7 @@
      */
 
     #pragma once
+
+    #include "../Physic/2D/Bounding/NRE_AABB.hpp"
+    #include "../Physic/2D/Shape/NRE_Shape.hpp"
+    #include "../Physic/2D/Shape/NRE_Circle.hpp"

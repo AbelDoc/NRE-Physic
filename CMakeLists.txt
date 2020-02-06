@@ -11,12 +11,17 @@ include_directories(C:/Users/abell/Documents/GitHub/NRE-Utility/src)
 
 
 include_directories(src/Physic)
-include_directories(src/Physic/Manager)
+include_directories(src/Physic/2D)
+include_directories(src/Physic/2D/Bounding)
+include_directories(src/Physic/2D/Shape)
 
 set(COMPILE_LIST
         src/Header/NRE_Physic.hpp
-        src/Physic/Manager/NRE_PhysicManager.hpp
-        src/Physic/Manager/NRE_PhysicManager.tpp)
+        src/Header/NRE_Physic2D.hpp
+        src/Physic/2D/Bounding/NRE_AABB.hpp
+        src/Physic/2D/Bounding/NRE_AABB.tpp
+        src/Physic/2D/Shape/NRE_Circle.hpp
+        src/Physic/2D/Shape/NRE_Shape.hpp)
 
 set(EXEC_LIST
         ${COMPILE_LIST}
